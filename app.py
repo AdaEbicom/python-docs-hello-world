@@ -1,4 +1,4 @@
-from flask import Flask
+ulfrom flask import Flask
 from flask import request
 from flask_restful import Api
 import pandas as pd
@@ -48,5 +48,5 @@ def hello():
                                   d.param.inv_pdc0, 
                                   weather)
     
-    return data, 200
+    return result, 200
 
