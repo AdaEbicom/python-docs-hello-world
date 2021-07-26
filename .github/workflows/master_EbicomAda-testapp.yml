@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'EbicomAda-testapp'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_8f7d9a1dcd944d4581c09a73d18fecfc }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_151e94086d5244a799a9044350507fba }}
