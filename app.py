@@ -1,6 +1,13 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/hello')
+@app.route('/hello', methods = ['GET', 'POST'])
 def hello():
-    return "Hello, Azure!"
+    if request.method == 'GET':
+        return "Hello, Azure GET!"
+    
+    else if request.method == 'POST':
+        return "Hello, Azure POST!"
+    
+    else:
+        return {}, 405
