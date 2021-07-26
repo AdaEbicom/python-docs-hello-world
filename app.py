@@ -10,12 +10,9 @@ from pvlib.temperature import TEMPERATURE_MODEL_PARAMETERS
 from pvlib.modelchain import ModelChain
 from pvlib.location import Location
 
-
 app = Flask(__name__)
 
 @app.route('/hello', methods = ['POST'])
 def hello():
-    print("a")
-    #data = request.get_json(silent=True)
-    return 200   
+    return "Hello, World!"  
 
