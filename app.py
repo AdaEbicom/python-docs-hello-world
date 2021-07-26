@@ -15,6 +15,7 @@ app = Flask(__name__)
 
 @app.route('/hello', methods = ['POST'])
 def hello():
+    print("a")
     #data = request.get_json(silent=True)
-    return {"lalala"}, 200   
+    return 200   
 
