@@ -48,5 +48,5 @@ def hello():
                                   d.param.inv_pdc0, 
                                   weather)
     
-    return result, 200
+    return result.to_dict(), 200
 
