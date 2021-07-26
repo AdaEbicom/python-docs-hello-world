@@ -14,5 +14,5 @@ app = Flask(__name__)
 
 @app.route('/hello', methods = ['POST'])
 def hello():
-    return {"lalala"}, 200
+    return "lalala", 201
 
