@@ -34,5 +34,19 @@ app = Flask(__name__)
 @app.route('/hello', methods = ['POST'])
 def hello():
     data = request.get_json(silent=True)
+    d = json.loads(json.dumps(data), object_hook=lambda d: SimpleNamespace(**d))
+        
+    weather = data['weather']       
+    weather = pd.DataFrame.from_dict(weather)   
+    weather.set_index('dt', inplace = True)        
+        
+    result = pvlib_forecast(d.location.latitude, 
+                                  d.location.longitude,
+                                  d.location.timezone, 
+                                  d.param.mod_pdc0, 
+                                  d.param.mod_gamma_pdc, 
+                                  d.param.inv_pdc0, 
+                                  weather)
+    
     return data, 200
 
