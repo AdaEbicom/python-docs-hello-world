@@ -1,4 +1,4 @@
-ulfrom flask import Flask
+from flask import Flask
 from flask import request
 from flask_restful import Api
 import pandas as pd
