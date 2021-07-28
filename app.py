@@ -31,8 +31,8 @@ def pvlib_forecast(lat, lon, tz, mod_pdc0, mod_gamma_pdc, inv_pdc0, weather):
 
 app = Flask(__name__)
 
-@app.route('/hello', methods = ['POST'])
-def hello():
+@app.route('/forecast', methods = ['POST'])
+def forecast():
     data = request.get_json(silent=True)
     d = json.loads(json.dumps(data), object_hook=lambda d: SimpleNamespace(**d))
         
